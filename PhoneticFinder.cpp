@@ -4,21 +4,21 @@ using namespace std;
 
 namespace phonetic{
   string find(string text, string word){
-	int textLenght=text.lenght();
+	int textLength=text.length();
     int itEqual;
     string textWord;
-    if (textLenght==0 || word.lenght()==0){
+    if (textLength==0 || word.length()==0){
         throw std::out_of_range("The text or the word data is empty");
     }
-    for (int i=0;i<textLenght;i++){
-        if (text.at(i) == ' ' || i == textLenght-1){
+    for (int i=0;i<textLength;i++){
+        if (text.at(i) == ' ' || i == textLength-1){
             textWord=textWord+text.at(i);
         }
         itEqual=isitequal(textWord,word);
         if (itEqual==0){
             return textWord;
         }
-        else if(i==textLenght-1){
+        else if(i==textLength-1){
             throw std::out_of_range("The word is not in the text");
         }
         else {
@@ -30,12 +30,12 @@ namespace phonetic{
     }
 	return 0;}
 
-    int itEqual (string textWord,string word){
-        int lenghtTextWord= textWord.lenght();
-        if (lenghtTextWord != word.lenght()){
+    int isitequal (string textWord,string word){
+        int lengthTextWord= textWord.length();
+        if (lengthTextWord != word.length()){
             return 1;
         }
-        for (int i=0;i<lenghtTextWord;){
+        for (int i=0;i<lengthTextWord;){
 
 
 
