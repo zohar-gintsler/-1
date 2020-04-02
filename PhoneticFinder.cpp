@@ -1,4 +1,3 @@
-sudo apt-get update
 #include <iostream>
 using namespace std;
 # include "PhoneticFinder.hpp"
